@@ -16,10 +16,10 @@ Rta/
 
 import csv
 
-def pregunta_02(filepath):
+def pregunta_02():
     letter_counts = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         reader = csv.reader(file)
         for row in reader:
             first_letter = row[0][0]
@@ -31,5 +31,3 @@ def pregunta_02(filepath):
     sorted_counts = sorted(letter_counts.items())
     return sorted_counts
 
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_02(df))

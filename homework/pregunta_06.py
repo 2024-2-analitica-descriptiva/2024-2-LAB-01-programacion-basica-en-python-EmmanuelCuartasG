@@ -27,10 +27,10 @@ Rta/
 
 """
 
-def pregunta_06(filepath):
+def pregunta_06():
     key_values = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 4:
@@ -46,6 +46,3 @@ def pregunta_06(filepath):
     result = [(key, min(values), max(values)) for key, values in key_values.items()]
     result.sort()
     return result
-
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_06(df))

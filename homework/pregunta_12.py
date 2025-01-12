@@ -5,10 +5,10 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
-def pregunta_12(filepath):
+def pregunta_12():
     letter_sums = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 4:
@@ -23,8 +23,6 @@ def pregunta_12(filepath):
     sorted_letter_sums = dict(sorted(letter_sums.items()))
     return sorted_letter_sums
 
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_12(df))
 
 
 """

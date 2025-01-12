@@ -6,10 +6,10 @@ utilizar pandas, numpy o scipy.
 """
 
 
-def pregunta_08(filepath):
+def pregunta_08():
     value_letters = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 1:
@@ -25,8 +25,6 @@ def pregunta_08(filepath):
     result.sort()
     return result
 
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_08(df))
 
 """
 Genere una lista de tuplas, donde el primer elemento de cada tupla

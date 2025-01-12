@@ -14,10 +14,10 @@ Rta/
 
 """
 
-def pregunta_05(filepath):
+def pregunta_05():
     letter_values = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 1:
@@ -31,6 +31,3 @@ def pregunta_05(filepath):
     result = [(letter, max(values), min(values)) for letter, values in letter_values.items()]
     result.sort()
     return result
-
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_05(df))

@@ -14,10 +14,10 @@ Rta/
 
 """
 
-def pregunta_03(filepath):
+def pregunta_03():
     letter_sums = {}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 1:
@@ -31,5 +31,3 @@ def pregunta_03(filepath):
     sorted_sums = sorted(letter_sums.items())
     return sorted_sums
 
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_03(df))

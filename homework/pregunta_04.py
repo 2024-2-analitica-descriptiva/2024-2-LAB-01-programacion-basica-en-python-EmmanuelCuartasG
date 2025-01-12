@@ -24,10 +24,10 @@ Rta/
 
 """
 
-def pregunta_04(filepath):
+def pregunta_04():
     month_counts = {str(i).zfill(2): 0 for i in range(1, 13)}
 
-    with open(filepath, mode='r') as file:
+    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 2:
@@ -38,6 +38,3 @@ def pregunta_04(filepath):
 
     sorted_counts = sorted(month_counts.items())
     return sorted_counts
-
-df = '/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv'
-print(pregunta_04(df))
