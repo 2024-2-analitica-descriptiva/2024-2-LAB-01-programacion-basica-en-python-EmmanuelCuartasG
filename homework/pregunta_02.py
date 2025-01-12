@@ -19,7 +19,7 @@ import csv
 def pregunta_02():
     letter_counts = {}
 
-    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
+    with open('files/input/data.csv', mode='r') as file:
         reader = csv.reader(file)
         for row in reader:
             first_letter = row[0][0]

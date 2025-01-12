@@ -8,7 +8,7 @@ utilizar pandas, numpy o scipy.
 def pregunta_07():
     value_letters = {}
 
-    with open('/home/emmanuel/Documents/GitHub/2024-2-LAB-01-programacion-basica-en-python-EmmanuelCuartasG/files/input/data.csv', mode='r') as file:
+    with open('files/input/data.csv', mode='r') as file:
         for line in file:
             columns = line.split('\t')
             if len(columns) > 1:
